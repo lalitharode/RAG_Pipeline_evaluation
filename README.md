@@ -111,3 +111,41 @@ These combine the evaluation of retrieval and generation components.
 4. **LangChain** for pipeline integration.
 
 These metrics provide a comprehensive view of the system's performance, helping to identify weak spots and improve the RAG pipeline.
+
+
+---
+
+### **Type of RAG Evaluation Selected and Reasons behind them**  
+  
+For evaluating the **Retrieval-Augmented Generation (RAG) pipeline**, we selected the following three types of evaluations:  
+
+### **1. Retrieval Evaluation**  
+- **Metrics Used:** Precision, Recall, and F1-score  
+- **Reasoning:**  
+  - We need to assess how well the retriever fetches relevant documents from the vector database.  
+  - Precision tells us how many retrieved documents are relevant.  
+  - Recall measures how many relevant documents were retrieved out of all possible relevant ones.  
+  - F1-score balances precision and recall.  
+  - We use text similarity (SequenceMatcher) with a threshold to determine relevance.  
+
+### **2. Generation Evaluation**  
+- **Metrics Used:** BLEU Score, ROUGE Scores (ROUGE-1, ROUGE-2, ROUGE-L)  
+- **Reasoning:**  
+  - BLEU Score helps measure the similarity between the generated response and a reference answer based on token overlap.  
+  - ROUGE-1 and ROUGE-2 capture unigram and bigram overlaps, helping to evaluate the fluency and coherence of the generated text.  
+  - ROUGE-L measures the longest common subsequence, useful for evaluating long-form responses.  
+
+### **3. Hallucination Evaluation**  
+- **Metrics Used:** Cosine Similarity, Confidence Score  
+- **Reasoning:**  
+  - Hallucination detection ensures the model's response is grounded in the retrieved documents.  
+  - We use **TF-IDF and cosine similarity** to measure how closely the generated answer aligns with the retrieved context.  
+  - If similarity is below a threshold (0.5), we flag potential hallucinations.  
+
+#### **Overall Justification:**  
+These three evaluations ensure that:  
+✅ **Retrieval quality is high** (precision/recall).  
+✅ **Generated responses are relevant and coherent** (BLEU/ROUGE).  
+✅ **The model is not fabricating information** (hallucination detection).  
+
+This makes the RAG system **accurate, reliable, and factual** in answering queries based on retrieved knowledge.
