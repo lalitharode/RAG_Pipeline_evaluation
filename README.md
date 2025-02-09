@@ -8,30 +8,30 @@ These evaluate the performance of the retriever in fetching relevant documents f
 #### a. **Precision**
 - Measures the proportion of retrieved documents that are relevant.
 - Formula:  
-  \[
-  \text{Precision} = \frac{\text{Number of Relevant Retrieved Documents}}{\text{Total Number of Retrieved Documents}}
-  \]
+  
+  Precision = {Number of Relevant Retrieved Documents}/{Total Number of Retrieved Documents}
+  
 
 #### b. **Recall**
 - Measures the proportion of relevant documents that are retrieved out of all relevant documents.
 - Formula:  
-  \[
-  \text{Recall} = \frac{\text{Number of Relevant Retrieved Documents}}{\text{Total Number of Relevant Documents in the Dataset}}
-  \]
+  
+  Recall = {Number of Relevant Retrieved Documents}/{Total Number of Relevant Documents in the Dataset}
+  
 
 #### c. **F1-Score**
 - The harmonic mean of precision and recall.
 - Formula:  
-  \[
-  F1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
-  \]
+  
+  F1 = 2 *{{Precision} *{Recall}}/{{Precision} + {Recall}}
+  
 
 #### d. **Mean Reciprocal Rank (MRR)**
 - Evaluates the ranking quality of the retriever by checking the position of the first relevant document in the ranked results.
 - Formula:  
-  \[
-  \text{MRR} = \frac{1}{|Q|} \sum_{i=1}^{|Q|} \frac{1}{\text{Rank of First Relevant Document in Query } i}
-  \]
+  
+  {MRR} = {1}{|Q|} +{i=1}^{|Q|} /{1}{{Rank of First Relevant Document in Query } i}
+  
 
 #### e. **Normalized Discounted Cumulative Gain (nDCG)**
 - Evaluates ranking quality by considering the relevance scores and positions of retrieved documents.

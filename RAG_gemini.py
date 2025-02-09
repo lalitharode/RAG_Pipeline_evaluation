@@ -21,7 +21,7 @@ from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
 
-from app2 import evaluate_retrieval, evaluate_generation, evaluate_hallucination
+from RAG_evaluation evaluate_retrieval, evaluate_generation, evaluate_hallucination
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
