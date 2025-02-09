@@ -1,0 +1,11 @@
+langchain
+langchain_community
+langchain-huggingface
+langchain-google-genai
+python-dotenv
+streamlit
+langchain_experimental
+sentence-transformers
+langchain_chroma
+langchainhub
+unstructured
