@@ -144,8 +144,8 @@ For evaluating the **Retrieval-Augmented Generation (RAG) pipeline**, we selecte
 
 #### **Overall Justification:**  
 These three evaluations ensure that:  
-✅ **Retrieval quality is high** (precision/recall).  
-✅ **Generated responses are relevant and coherent** (BLEU/ROUGE).  
-✅ **The model is not fabricating information** (hallucination detection).  
+   **Retrieval quality is high** (precision/recall).  
+   **Generated responses are relevant and coherent** (BLEU/ROUGE).  
+   **The model is not fabricating information** (hallucination detection).  
 
 This makes the RAG system **accurate, reliable, and factual** in answering queries based on retrieved knowledge.
